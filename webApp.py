@@ -18,7 +18,7 @@ uploaded_files = st.file_uploader(
     accept_multiple_files=True
 )
 
-name_database = "DatabaseTest.xlsx"
+name_database = "Database.xlsx"
 
 if uploaded_files:
     liste_perf_dfs = []  # DFs issus des .xls
