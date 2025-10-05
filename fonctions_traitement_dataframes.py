@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # --- Mapping cohérent des colonnes ---
 column_mapping = {
@@ -101,3 +102,14 @@ def append_with_mapping(source_df, target_df, column_mapping):
 
 # Utilisation :
 # result_database = transfer_data(df, template_database, mapping)
+
+
+def add_comp_formulations(df, comp_formulations):
+    for idx, row in comp_formulations.iterrows():
+        formulation_id = row['Formulation ID']
+        for col, val in row.items():
+            if col != 'Formulation ID':
+                # Teste si la cellule n’est PAS vide
+                if pd.notna(val) and val not in ["", " ", None]:
+                    df.loc[df['Formulation ID'] == formulation_id, col] = val
+    return df

@@ -7,7 +7,7 @@ import re
 import openpyxl
 from openpyxl.utils.dataframe import dataframe_to_rows
 from tutoriel import render_tutoriel
-from fonctions_traitement_dataframes import column_mapping, append_with_mapping
+from fonctions_traitement_dataframes import column_mapping, append_with_mapping, add_comp_formulations
 from fonctions_traitement_total_fichiers import traiter_performance_xls, traiter_formulation_xlsx
 
 st.title("Traitement automatique des données de tests")
@@ -76,8 +76,8 @@ if uploaded_files:
     if unnamed_cols:
         template_database = template_database.drop(columns=unnamed_cols)
 
-    template_database = pd.concat([template_database, comp_formulations])
-    template_database = template_database.groupby("Formulation ID", as_index=False).first()
+    template_database = add_comp_formulations(template_database, comp_formulations)
+
 
     # 5. Append du template dans la database existante (préservation de la mise en page)
     try:
