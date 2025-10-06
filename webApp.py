@@ -12,7 +12,7 @@ from tutoriel import render_tutoriel
 from fonctions_traitement_dataframes import column_mapping, append_with_mapping, add_comp_formulations
 from fonctions_traitement_total_fichiers import traiter_performance_xls, traiter_formulation_xlsx
 
-st.title("Traitement automatique des données de tests")
+st.title("McBride - Traitement automatique des données de tests")
 render_tutoriel()
 
 uploaded_files = st.file_uploader(
