@@ -2,7 +2,7 @@ import streamlit as st
 def render_tutoriel(): st.markdown(""" 
 ## Explications d’utilisation
 Déposez dans la zone ci-dessous l’ensemble des fichiers nécessaires.
-L’application détecte les fichiers et lance le traitement automatiquement, puis vous propose la nouvelle base de données à télécharger.
+Lancer le traitement puis vous pourrez télécharger la nouvelle base de données.
 ### Fichiers attendus
 - 1 fichier de la base de données (database), au format Excel moderne:
   - Nom exact: `Database.xlsx`
