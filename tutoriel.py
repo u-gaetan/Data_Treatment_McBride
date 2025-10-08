@@ -10,7 +10,7 @@ Lancer le traitement puis vous pourrez télécharger la nouvelle base de donnée
 - les fichiers de performances de tests:
   - Type: `.xls` ,seul la première feuille est lue (nommée `AISE+`)
 - les fichiers de compositions de formulations (souvent plusieurs pour 1 fichier de performances):
-  - Type: `.xlsx`
-  - Nom de fichier = identifiant de la formulation: `17XXXXXX.xlsx` ou `16XXXXXX.xlsx`
+  - Type: `.xlsx` ou `.XLSX`
+  - Nom de fichier = identifiant de la formulation: `17XXXXXX.xlsx` ou `16XXXXXX.xlsx` 
     (par exemple: `17083746.xlsx`, `16140844.xlsx`)
 """)

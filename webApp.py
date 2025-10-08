@@ -131,7 +131,7 @@ if uploaded_files and process_clicked:
             st.download_button(
                 label="Télécharger la nouvelle database",
                 data=output,
-                file_name="resultats.xlsx",
+                file_name="new_database.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 key="unique_download_button"
             )
