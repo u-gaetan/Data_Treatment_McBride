@@ -17,7 +17,7 @@ render_tutoriel()
 
 uploaded_files = st.file_uploader(
     "Déposez vos fichiers ici",
-    type=["xlsx", "xls", "pdf"],
+    type=["xlsx","XLSX","xls", "pdf"],
     accept_multiple_files=True
 )
 
