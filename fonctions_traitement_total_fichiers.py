@@ -109,7 +109,7 @@ def traiter_formulation_xlsx(uploaded_file,
     row_dict = {col: pd.NA for col in template_columns}
 
     # Ajoute l'ID (nom du fichier)
-    row_dict["Formulation ID"] = int(uploaded_file.name.replace(".xlsx", ""))
+    row_dict["Formulation ID"] = int(uploaded_file.name.lower().replace(".xlsx", ""))
 
     for _, r in df[needed].iterrows():
         comp = r["Component number"]
